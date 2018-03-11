@@ -1,0 +1,58 @@
+/* Fonts
+
+'Indie Flower', cursive;
+'Permanent Marker', cursive;
+'Shadows Into Light', cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100%;
+  box-shadow: inset 0px 0px 150px black;
+  background: url('./img/background.jpeg');
+}
+
+.main {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.btn {
+  font-family: 'Indie Flower', cursive, sans-serif;
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+  width: 100px;
+  padding-top: 15px;
+  text-align: center;
+  margin: 5px auto;
+  border-radius: 8px;
+}
+
+video {
+  width: 497px;
+  height: auto;
+  border: none;
+}
