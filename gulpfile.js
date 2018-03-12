@@ -20,4 +20,8 @@ gulp.task('watch', function() {
     browserSync.reload();
   });
 
+  watch('./app/assets/js/script.js', function(){
+    browserSync.reload();
+  })
+
 });
