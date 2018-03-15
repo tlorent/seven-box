@@ -19,7 +19,7 @@ html, body {
 body {
   min-height: 100%;
   box-shadow: inset 0px 0px 150px black;
-  background: url('./img/background.jpeg');
+  background: url('../img/background.jpeg');
 }
 
 .main {
@@ -73,4 +73,14 @@ video {
 img {
   width: 500px;
   height: 500px;
+}
+
+#hiddenImage {
+  opacity: 0;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+#hiddenImage.animated {
+  opacity: 1;
 }

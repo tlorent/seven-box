@@ -1,35 +1,46 @@
 $(document).ready(function(){
   // Hide content before pressing the 'Find out' button
-  $("#hiddenImage").hide();
+  $("img").hide();
   $("#theVideo2").hide();
-  $(".btn").hide();
+  $(".backButton").hide();
 
-  // function getRandomInt(min, max) {
-  //   return Math.floor(Math.random() * (max - min) + min);
-  // }
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
 
-  // var randomNum = getRandomInt(1, 11);
-  // var imageName = randomNum + ".jpg";
+  var randomNum = getRandomInt(0, 10);
+  var imageName = randomNum + ".jpg";
 
-  function showImage() {
+  // Set the array with CSS animations
+  var animations = ["bounceInLeft", "bounceInRight", "fadeInLeft", "fadeInRight", "rotateInUpRight", "rotateInUpLeft", "slideInUp", "slideInDown", "rollIn", "flipInX"];
+
+  var animation = animations[randomNum];
+
+  function showContent() {
     $("#theVideo2").attr("autoplay", true);
     $(".backButton").show();
-    // $("img").attr("src", "./assets/img/" + imageName);
-    $("img").attr("src", "./assets/img/1.jpg");
+    $("img").attr("src", "./assets/img/" + imageName);
+    $("img").addClass("animated " + animation);
   }
 
-  $(".btn").on('click', function(){
+  $("#theButton, .goButton").on('click', function(){
+    $("#theVideo").trigger('pause');
     $("#theVideo").hide();
     $("#h1").hide();
-    $("#hiddenImage").show();
-    $(".btn").hide();
+    $("img").show();
+    $(".goButton").hide();
 
-    setTimeout(showImage, 2000);
+    setTimeout(showContent, 2000);
   });
 
-  function showButton() {
-    $(".goButton").show();
-  }
+  $(".backButton").click(function(){
+    $(location).attr('href', './index.html');
+    // location.replace("./index.html");
+  });
 
-  setTimeout(showButton, 3000);
+  // function showButton() {
+  //   $(".goButton").show();
+  // }
+  //
+  // setTimeout(showButton, 3000);
 })

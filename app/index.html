@@ -3,22 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>What's in the Box?!</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Permanent+Marker|Shadows+Into+Light" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css" type="text/css">
+
+    <!-- CSS & Animate.css -->
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="main">
 
-        <!-- Hidden Content -->
-        <div class="btn backButton"><a href="./index.html">Try Again!</a></div>
-        <video id="theVideo2" controls height="250px" src="./assets/video/box-2.mp4"></video>
-        <img id="hiddenImage">
+        <div class="hidden-content">
+          <!-- Show after pressing the button -->
+          <div class="btn backButton"><a href="#">Try Again!</a></div>
+          <video id="theVideo2" controls height="250px" src="./assets/video/box-2.mp4"></video>
+          <img>
+        </div>
 
-        <!-- Shown when loading the page -->
-        <h1 id="h1">What&apos;s in the Box?!</h1>
-        <video id="theVideo" controls height="250px" src="./assets/video/box.mp4"></video>
-        <div class="btn goButton"><a id="theButton">Find Out</a></div>
+        <div class="loaded-content">
+          <!-- Show when loading the page -->
+          <h1 id="h1">What&apos;s in the Box?!</h1>
+          <video id="theVideo" controls height="250px" src="./assets/video/box.mp4"></video>
+          <div class="btn goButton"><a id="theButton">Find Out</a></div>
+        </div>
     </div>
 
     <script type="text/javascript" src="./assets/js/script.js"></script>
